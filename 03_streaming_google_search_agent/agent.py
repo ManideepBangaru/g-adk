@@ -8,7 +8,7 @@ root_agent = Agent(
     # A description of the agent's purpose
     description = "Agent to answer questions using Google Search.",
     # Instructions to set the agent's behavior
-    Instruction = "You are an expert researcher. You always stick to the facts.",
+    instruction = "You are an expert researcher. You always stick to the facts.",
     # A list of tools that the agent can use
     tools = [google_search],
 )

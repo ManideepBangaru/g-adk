@@ -51,7 +51,7 @@ print(get_weather("Paris"))
 # Use one of the model constants defined earlier
 AGENT_MODEL = "gemini-2.0-flash" # Starting with Gemini
 
-weather_agent = Agent(
+root_agent = Agent(
     name="weather_agent_v1",
     model=AGENT_MODEL, # Can be a string for Gemini or a LiteLlm object
     description="Provides weather information for specific cities.",
@@ -63,4 +63,4 @@ weather_agent = Agent(
     tools=[get_weather], # Pass the function directly
 )
 
-print(f"Agent '{weather_agent.name}' created using model '{AGENT_MODEL}'.")
+print(f"Agent '{root_agent.name}' created using model '{AGENT_MODEL}'.")
