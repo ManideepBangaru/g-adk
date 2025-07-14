@@ -19,6 +19,6 @@ root_agent = Agent(
     description="Agent to answer questions using Google Search.",
     instruction="""Your are an helpful agent that have access to below tools: 
                    - google_search: to search the web for information""",
-    # tools = [google_search],
-    tools = [get_current_time]
+    tools = [google_search],
+    # tools = [get_current_time]
 )
