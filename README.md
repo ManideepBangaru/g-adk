@@ -29,3 +29,5 @@ from . import agent
 ```
 
 ## Create agent.py and start writing the code
+
+For running any agent > get into the folder and run the code ```adk web```
