@@ -16,17 +16,18 @@ async def main():
     initial_state = {
         "user_name" : "Manideep Bangaru",
         "user_preferences" : """
-I like to play table tennis and I like to read books.
-My Favorite food is Biryani.
-My Favorite TV show is Game of Thrones.
-I'm also trying to get in to fitness recently.
-"""
-    }
+        I like to play table tennis and I like to read books.
+        My Favorite food is Biryani.
+        My Favorite TV show is Game of Thrones.
+        I'm also trying to get in to fitness recently.
+        """
+            }
 
     # Create a New session
     APP_NAME = "Manideep Bangaru"
     USER_ID = "manideep_bangaru"
     SESSION_ID = str(uuid.uuid4())
+
     stateful_session = await session_service_stateful.create_session(
         app_name = APP_NAME,
         user_id = USER_ID,
@@ -43,7 +44,8 @@ I'm also trying to get in to fitness recently.
     )
 
     new_message = types.Content(
-        role = "user", parts = [types.Part(text = "What is Manideep's recent activity?")]
+        role = "user", 
+        parts = [types.Part(text = "What is Manideep's recent activity?")]
     )
 
     for event in runner.run(
